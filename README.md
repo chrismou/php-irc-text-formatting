@@ -4,6 +4,11 @@
 
 [![Build Status](https://travis-ci.org/chrismou/phergie-irc-plugin-react-format.svg)](https://travis-ci.org/chrismou/phergie-irc-plugin-react-format)
 
+## About
+
+This plugin is designed to provide Phergie plugin developers a simple way to add colors/styles to their output.  It isn't designed to react to any IRC events,
+and so won't do anything if you add it to your bot config - it's designed predominantly for use in other plugins.
+
 ## Install
 
 The recommended method of installation is [through composer](http://getcomposer.org).
@@ -20,19 +25,17 @@ See Phergie documentation for more information on
 [installing and enabling plugins](https://github.com/phergie/phergie-irc-bot-react/wiki/Usage#plugins).
 
 ## Configuration
-As this plugin doesn't respond to events, you don't need to add it to a bot config to use it.  However, if you want to use it for formatting text within your own
-plugins, you'll need to include it somewhere withing your plugin code.  The simplest way of doing this is as follows:
+
+To begin adding formatting to ouput text within your own plugins, you'll need to include it somewhere withing your plugin class.  The simplest way of doing 
+this is as follows:
 
 ```php
+protected $format;
+
 function __construct(array $config=array()) {
     $this->format = new \Chrismou\Phergie\Plugin\Format\Plugin;
     ...
 }
-```
-You may also want to declare $format:
-
-```php
-protected $format;
 ```
 
 Or, if you're only using it once, you can just include it directly in your method

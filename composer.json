@@ -1,7 +1,8 @@
 {
     "name": "chrismou/phergie-irc-plugin-react-format",
-    "description": "Phergie plugin for providing a simple way to add color/styling to your plugin's text output",
+    "description": "Phergie developer plugin for providing a simple way to add color/styling to your plugin's text output",
     "keywords": [ "phergie", "irc", "bot", "plugin" ],
+    "homepage": "http://github.com/chrismou/phergie-irc-plugin-react-format",
     "license": "BSD-2-Clause",
     "support": {
         "email": "phergie@mou.me.uk",
@@ -11,13 +12,13 @@
     },
     "minimum-stability": "dev",
     "require": {
+        "php": ">=5.4.0",
         "phergie/phergie-irc-bot-react": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "4.1.*",
         "phake/phake": "2.0.0-beta2",
-        "phergie/phergie-irc-plugin-react-autojoin": "1.0.*",
-        "pschwisow/phergie-irc-plugin-react-puppet": "dev-master"
+        "phergie/phergie-irc-plugin-react-autojoin": "1.0.*"
     },
     "autoload": {
         "psr-4": {

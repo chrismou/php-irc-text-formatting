@@ -10,9 +10,6 @@
 
 namespace Chrismou\Phergie\Tests\Plugin\Format;
 
-use Phake;
-use Phergie\Irc\Bot\React\EventQueueInterface as Queue;
-use Phergie\Irc\Event\EventInterface as Event;
 use Chrismou\Phergie\Plugin\Format\Plugin;
 
 /**
@@ -84,7 +81,7 @@ class PluginTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test color responses are what we're expecting
+     * Test rainbow responses are what we're expecting
      */
     public function testRainbow()
     {

@@ -3,6 +3,8 @@
 [Phergie](http://github.com/phergie/phergie-irc-bot-react/) developer plugin for providing a simple way to add color/styling to your own plugin's text output.
 
 [![Build Status](https://travis-ci.org/chrismou/phergie-irc-plugin-react-formatting.svg)](https://travis-ci.org/chrismou/phergie-irc-plugin-react-formatting)
+[![Code Climate](https://codeclimate.com/github/chrismou/phergie-irc-plugin-react-formatting/badges/gpa.svg)](https://codeclimate.com/github/chrismou/phergie-irc-plugin-react-formatting)
+[![Test Coverage](https://codeclimate.com/github/chrismou/phergie-irc-plugin-react-formatting/badges/coverage.svg)](https://codeclimate.com/github/chrismou/phergie-irc-plugin-react-formatting)
 
 ## About
 

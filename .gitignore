@@ -1,0 +1,7 @@
+## Project
+vendor/*
+config.php
+build/*
+
+## IDE
+.idea/*

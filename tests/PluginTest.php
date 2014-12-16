@@ -1,22 +1,22 @@
 <?php
 /**
- * Phergie plugin for providing a simple way to add color/styling to your plugin's text output (https://github.com/chrismou/phergie-irc-plugin-react-format)
+ * Phergie plugin for providing a simple way to add color/styling to your plugin's text output (https://github.com/chrismou/phergie-irc-plugin-react-formatting)
  *
- * @link https://github.com/chrismou/phergie-irc-plugin-react-format for the canonical source repository
+ * @link https://github.com/chrismou/phergie-irc-plugin-react-formatting for the canonical source repository
  * @copyright Copyright (c) 2014 Chris Chrisostomou (http://mou.me)
  * @license http://phergie.org/license New BSD License
- * @package Chrismou\Phergie\Plugin\Format
+ * @package Chrismou\Phergie\Plugin\Formatting
  */
 
-namespace Chrismou\Phergie\Tests\Plugin\Format;
+namespace Chrismou\Phergie\Tests\Plugin\Formatting;
 
-use Chrismou\Phergie\Plugin\Format\Plugin;
+use Chrismou\Phergie\Plugin\Formatting\Plugin;
 
 /**
  * Tests for the Plugin class.
  *
  * @category Chrismou
- * @package Chrismou\Phergie\Plugin\Format
+ * @package Chrismou\Phergie\Plugin\Formatting
  */
 class PluginTest extends \PHPUnit_Framework_TestCase
 {

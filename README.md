@@ -2,7 +2,7 @@
 
 [Phergie](http://github.com/phergie/phergie-irc-bot-react/) developer plugin for providing a simple way to add color/styling to your own plugin's text output.
 
-[![Build Status](https://travis-ci.org/chrismou/phergie-irc-plugin-react-format.svg)](https://travis-ci.org/chrismou/phergie-irc-plugin-react-format)
+[![Build Status](https://travis-ci.org/chrismou/phergie-irc-plugin-react-formatting.svg)](https://travis-ci.org/chrismou/phergie-irc-plugin-react-formatting)
 
 ## About
 
@@ -16,7 +16,7 @@ The recommended method of installation is [through composer](http://getcomposer.
 ```JSON
 {
     "require": {
-        "chrismou/phergie-irc-plugin-react-format": "dev-master"
+        "chrismou/phergie-irc-plugin-react-formatting": "dev-master"
     }
 }
 ```
@@ -32,17 +32,18 @@ this is as follows:
 ```php
 protected $format;
 
-function __construct(array $config=array()) {
-    $this->format = new \Chrismou\Phergie\Plugin\Format\Plugin;
+function __construct(array $config=array())
+{
+    $this->format = new \Chrismou\Phergie\Plugin\Formatting\Plugin;
     ...
 }
 ```
 
-Or, if you're only using it once, you can just include it directly in your method
+Or, if you're only using it once, you can just include it directly in your method.
 ```php
 public function foo
 {
-    $format = new \Chrismou\Phergie\Plugin\Format\Plugin;
+    $format = new \Chrismou\Phergie\Plugin\Formatting\Plugin;
     ...
 }
 ```
@@ -52,10 +53,10 @@ public function foo
 The 3 methods available are **color**, **style** and **rainbow**.
 
 #### Color
-This takes 3 parameters.  First is the text, second is the text color, third is the background colour (optional)
+This takes 3 parameters.  First is the text, second is the text color, third is the background colour (optional).
 
 ```php
-$format = new \Chrismou\Phergie\Plugin\Format\Plugin;
+$format = new \Chrismou\Phergie\Plugin\Formatting\Plugin;
 $format->color("This text will be red", "red"); // produces red text on the default background colour
 $format->color("This text will be blue on green", "red", "green"); // produces red text on a green background
 ```
@@ -80,10 +81,10 @@ $format->color("This text will be blue on green", "red", "green"); // produces r
 
 
 #### Style
-This takes 2 parameters.  First is the text, second is the style to use
+This takes 2 parameters.  First is the text, second is the style to use.
 
 ```php
-$format = new \Chrismou\Phergie\Plugin\Format\Plugin;
+$format = new \Chrismou\Phergie\Plugin\Formatting\Plugin;
 $format->style("This text will be underlined", "underline"); // produces underlined text
 ```
 
@@ -92,12 +93,12 @@ $format->style("This text will be underlined", "underline"); // produces underli
 * underline
 * reverse (switches foreground and background color)
 
-I've purposely excluded the lesser used strikethrough and italic codes as support for them among IRC clients is fairly poor
+I've purposely excluded the lesser used strikethrough and italic codes as support for them among IRC clients is fairly poor.
 
 #### Rainbow
-This takes a single parameter - the text - and gives the string a rainbow colouring
+This takes a single parameter - the text - and gives the string a rainbow colouring.
 ```php
-$format = new \Chrismou\Phergie\Plugin\Format\Plugin;
+$format = new \Chrismou\Phergie\Plugin\Formatting\Plugin;
 $format->rainbow("This text will be FABULOUS"); // produces rainbow coloured text
 ```
 

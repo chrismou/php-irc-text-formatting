@@ -127,6 +127,9 @@ class Plugin extends AbstractPlugin
         $rainbowKey = 0;
 
         for($a=0;$a<strlen($text);$a++) {
+
+            if ($rainbowKey > count($rainbow)-1) $rainbowKey = 0;
+
             $char = substr($text, $a, 1);
 
             // Ignore spaces
@@ -136,16 +139,9 @@ class Plugin extends AbstractPlugin
             }
 
             // Style the current character
-            $output .= $this->color($char, current($rainbow));
+            $output .= $this->color($char, $rainbow[$rainbowKey]);
 
-            // Either advance or reset the colour array, depending on where we are
-            if ($rainbowKey === count($rainbow)) {
-                $rainbowKey = 0;
-                reset($rainbow);
-            } else {
-                $rainbowKey++;
-                next($rainbow);
-            }
+            $rainbowKey++;
         }
 
         return $output;

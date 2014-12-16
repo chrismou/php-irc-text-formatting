@@ -85,20 +85,24 @@ class PluginTest extends \PHPUnit_Framework_TestCase
      */
     public function testRainbow()
     {
-        // The rainbow method skips blank characters, so test with and without
+        // Test with and without spaces, and over 7 characters
         $string1 = "abcdefg";
         $string2 = "a b c d efg";
+        $string3 = "abcdefgh";
 
         $plugin = new Plugin;
 
         $convertedString1 = $plugin->rainbow($string1);
         $convertedString2 = $plugin->rainbow($string2);
+        $convertedString3 = $plugin->rainbow($string3);
 
         // Check real and fake colours still return a string
         $this->assertInternalType('string', $convertedString1);
         $this->assertInternalType('string', $convertedString2);
+        $this->assertInternalType('string', $convertedString3);
 
-        $this->assertSame($convertedString1, "\x0304a\x03\x0308b\x03\x0313c\x03\x0303d\x03\x0306e\x03\x0307f\x03\x0302g\x03");
-        $this->assertSame($convertedString2, "\x0304a\x03 \x0308b\x03 \x0313c\x03 \x0303d\x03 \x0306e\x03\x0307f\x03\x0302g\x03");
+        $this->assertSame("\x0304a\x03\x0308b\x03\x0313c\x03\x0303d\x03\x0306e\x03\x0307f\x03\x0302g\x03", $convertedString1);
+        $this->assertSame("\x0304a\x03 \x0308b\x03 \x0313c\x03 \x0303d\x03 \x0306e\x03\x0307f\x03\x0302g\x03", $convertedString2);
+        $this->assertSame("\x0304a\x03\x0308b\x03\x0313c\x03\x0303d\x03\x0306e\x03\x0307f\x03\x0302g\x03\x0304h\x03", $convertedString3);
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e92d2627cea322df0f145f77be57744e",
+    "hash": "3e620cac4913f9efea1edc37448ee5ba",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -947,6 +947,46 @@
             "time": "2014-04-20 18:39:27"
         },
         {
+            "name": "phergie/phergie-irc-plugin-react-command",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phergie/phergie-irc-plugin-react-command.git",
+                "reference": "e20a2fc4520289fa4e7cda575c6b24ebf1d6b943"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phergie/phergie-irc-plugin-react-command/zipball/e20a2fc4520289fa4e7cda575c6b24ebf1d6b943",
+                "reference": "e20a2fc4520289fa4e7cda575c6b24ebf1d6b943",
+                "shasum": ""
+            },
+            "require": {
+                "phergie/phergie-irc-bot-react": "dev-master"
+            },
+            "require-dev": {
+                "phake/phake": "1.0.*",
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phergie\\Irc\\Plugin\\React\\Command\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "description": "Phergie plugin for parsing commands issued to the bot",
+            "keywords": [
+                "bot",
+                "irc",
+                "plugin",
+                "react"
+            ],
+            "time": "2014-04-20 18:43:07"
+        },
+        {
             "name": "phpunit/php-code-coverage",
             "version": "2.0.x-dev",
             "source": {
@@ -1770,12 +1810,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "50f680f99c702c831314c00220c222aaff8916f8"
+                "reference": "24f2c9ea9353cbb25dc40786272f0b4f42ba3d3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/50f680f99c702c831314c00220c222aaff8916f8",
-                "reference": "50f680f99c702c831314c00220c222aaff8916f8",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/24f2c9ea9353cbb25dc40786272f0b4f42ba3d3c",
+                "reference": "24f2c9ea9353cbb25dc40786272f0b4f42ba3d3c",
                 "shasum": ""
             },
             "require": {
@@ -1783,10 +1823,10 @@
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.0",
+                "symfony/config": "~2.0,>=2.0.5",
                 "symfony/dependency-injection": "~2.6",
                 "symfony/expression-language": "~2.6",
-                "symfony/stopwatch": "~2.2"
+                "symfony/stopwatch": "~2.3"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -1819,7 +1859,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-12-12 16:23:01"
+            "time": "2014-12-16 20:28:45"
         },
         {
             "name": "symfony/filesystem",

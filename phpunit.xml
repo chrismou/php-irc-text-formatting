@@ -9,7 +9,7 @@
          bootstrap="vendor/autoload.php"
 >
     <testsuites>
-        <testsuite name="chrismou/phergie-irc-plugin-react-formatting test suite">
+        <testsuite name="chrismou/php-irc-text-formatting test suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

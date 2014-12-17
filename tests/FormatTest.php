@@ -1,35 +1,33 @@
 <?php
 /**
- * Phergie plugin for providing a simple way to add color/styling to your plugin's text output (https://github.com/chrismou/phergie-irc-plugin-react-formatting)
+ * PHP library for adding color and styling to IRC text output (https://github.com/chrismou/php-irc-text-formatting)
  *
- * @link https://github.com/chrismou/phergie-irc-plugin-react-formatting for the canonical source repository
+ * @link https://github.com/chrismou/php-irc-text-formatting for the canonical source repository
  * @copyright Copyright (c) 2014 Chris Chrisostomou (http://mou.me)
  * @license http://phergie.org/license New BSD License
- * @package Chrismou\Phergie\Plugin\Formatting
+ * @package Chrismou\Irc\TextFormatting
  */
 
-namespace Chrismou\Phergie\Tests\Plugin\Formatting;
+namespace Chrismou\Irc\TextFormatting\Tests;
 
-use Chrismou\Phergie\Plugin\Formatting\Plugin;
+use Chrismou\Irc\TextFormatting\Format;
 
 /**
  * Tests for the Plugin class.
  *
  * @category Chrismou
- * @package Chrismou\Phergie\Plugin\Formatting
+ * @package Chrismou\Irc\TextFormatting
  */
-class PluginTest extends \PHPUnit_Framework_TestCase
+class FormatTest extends \PHPUnit_Framework_TestCase
 {
-
-
     /**
      * Tests that getSubscribedEvents() returns an array.
      */
     public function testGetSubscribedEvents()
     {
-        $plugin = new Plugin;
-        $this->assertInternalType('array', $plugin->getSubscribedEvents());
-        $this->assertEmpty($plugin->getSubscribedEvents());
+        $format = new Format;
+        $this->assertInternalType('array', $format->getSubscribedEvents());
+        $this->assertEmpty($format->getSubscribedEvents());
     }
 
     /**
@@ -39,10 +37,10 @@ class PluginTest extends \PHPUnit_Framework_TestCase
     {
         $string = "This is a test string";
 
-        $plugin = new Plugin;
+        $format = new Format;
 
-        $validConvertedString = $plugin->color($string, "red");
-        $invalidConvertedString = $plugin->color($string, "fakeColor");
+        $validConvertedString = $format->color($string, "red");
+        $invalidConvertedString = $format->color($string, "fakeColor");
 
         // Check real and fake colours still return a string
         $this->assertInternalType('string', $validConvertedString);
@@ -59,12 +57,12 @@ class PluginTest extends \PHPUnit_Framework_TestCase
     {
         $string = "This is a test string";
 
-        $plugin = new Plugin;
+        $format = new Format;
 
-        $boldString = $plugin->style($string, "bold");
-        $underlineString = $plugin->style($string, "underline");
-        $reverseString = $plugin->style($string, "reverse");
-        $invalidStyle = $plugin->style($string, "stylissimo");
+        $boldString = $format->style($string, "bold");
+        $underlineString = $format->style($string, "underline");
+        $reverseString = $format->style($string, "reverse");
+        $invalidStyle = $format->style($string, "stylissimo");
 
 
         // Check the tested styles are still returning strings
@@ -90,11 +88,11 @@ class PluginTest extends \PHPUnit_Framework_TestCase
         $string2 = "a b c d efg";
         $string3 = "abcdefgh";
 
-        $plugin = new Plugin;
+        $format = new Format;
 
-        $convertedString1 = $plugin->rainbow($string1);
-        $convertedString2 = $plugin->rainbow($string2);
-        $convertedString3 = $plugin->rainbow($string3);
+        $convertedString1 = $format->rainbow($string1);
+        $convertedString2 = $format->rainbow($string2);
+        $convertedString3 = $format->rainbow($string3);
 
         // Check real and fake colours still return a string
         $this->assertInternalType('string', $convertedString1);

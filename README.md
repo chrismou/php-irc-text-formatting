@@ -1,6 +1,6 @@
-# Text formatting plugin for [Phergie](http://github.com/phergie/phergie-irc-bot-react/)
+# IRC color/style library for PHP
 
-[Phergie](http://github.com/phergie/phergie-irc-bot-react/) developer plugin for providing a simple way to add color/styling to your own plugin's text output.
+PHP library for adding color and styling to IRC text output
 
 [![Build Status](https://travis-ci.org/chrismou/phergie-irc-plugin-react-formatting.svg)](https://travis-ci.org/chrismou/phergie-irc-plugin-react-formatting)
 [![Code Climate](https://codeclimate.com/github/chrismou/phergie-irc-plugin-react-formatting/badges/gpa.svg)](https://codeclimate.com/github/chrismou/phergie-irc-plugin-react-formatting)
@@ -8,8 +8,8 @@
 
 ## About
 
-This plugin is designed to provide Phergie plugin developers a simple way to add colors/styles to their output.  It isn't designed to react to any IRC events,
-and so won't do anything if you add it to your bot config - it's designed predominantly for use in other plugins.
+This plugin is designed to provide IRC script writers a simple way to add colors/styles to their output. It should be compatible with most major PHP IRC bots, such as 
+[Phergie](https://github.com/phergie/phergie-irc-bot-react).
 
 ## Install
 
@@ -18,25 +18,21 @@ The recommended method of installation is [through composer](http://getcomposer.
 ```JSON
 {
     "require": {
-        "chrismou/phergie-irc-plugin-react-formatting": "dev-master"
+        "chrismou/php-irc-text-formatting": "dev-master"
     }
 }
 ```
 
-See Phergie documentation for more information on
-[installing and enabling plugins](https://github.com/phergie/phergie-irc-bot-react/wiki/Usage#plugins).
-
 ## Configuration
 
-To begin adding formatting to ouput text within your own plugins, you'll need to include it somewhere withing your plugin class.  The simplest way of doing 
-this is as follows:
+To begin adding formatting to ouput text within your own applications, you'll need to include it in your project.  The simplest way of doing this is as follows:
 
 ```php
 protected $format;
 
 function __construct(array $config=array())
 {
-    $this->format = new \Chrismou\Phergie\Plugin\Formatting\Plugin;
+    $this->format = new \Chrismou\Irc\TextFormatting\Format;
     ...
 }
 ```
@@ -45,7 +41,7 @@ Or, if you're only using it once, you can just include it directly in your metho
 ```php
 public function foo
 {
-    $format = new \Chrismou\Phergie\Plugin\Formatting\Plugin;
+    $format = new \Chrismou\Irc\TextFormatting\Format;
     ...
 }
 ```
@@ -58,9 +54,9 @@ The 3 methods available are **color**, **style** and **rainbow**.
 This takes 3 parameters.  First is the text, second is the text color, third is the background colour (optional).
 
 ```php
-$format = new \Chrismou\Phergie\Plugin\Formatting\Plugin;
-$format->color("This text will be red", "red"); // produces red text on the default background colour
-$format->color("This text will be blue on green", "red", "green"); // produces red text on a green background
+$format = new \Chrismou\Irc\TextFormatting\Format;
+$format->color("This text will be red", "red");
+$format->color("This text will be blue on a green background", "blue", "green");
 ```
 
 **Available color codes:**
@@ -86,8 +82,8 @@ $format->color("This text will be blue on green", "red", "green"); // produces r
 This takes 2 parameters.  First is the text, second is the style to use.
 
 ```php
-$format = new \Chrismou\Phergie\Plugin\Formatting\Plugin;
-$format->style("This text will be underlined", "underline"); // produces underlined text
+$format = new \Chrismou\Irc\TextFormatting\Format;
+$format->style("This text will be underlined", "underline");
 ```
 
 **Available style codes:**
@@ -100,7 +96,7 @@ I've purposely excluded the lesser used strikethrough and italic codes as suppor
 #### Rainbow
 This takes a single parameter - the text - and gives the string a rainbow colouring.
 ```php
-$format = new \Chrismou\Phergie\Plugin\Formatting\Plugin;
+$format = new \Chrismou\Irc\TextFormatting\Format;
 $format->rainbow("This text will be FABULOUS"); // produces rainbow coloured text
 ```
 

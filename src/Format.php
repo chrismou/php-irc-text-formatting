@@ -1,26 +1,22 @@
 <?php
 /**
- * Phergie developer plugin for providing a simple way to add color/styling to your plugin's text output (https://github.com/chrismou/phergie-irc-plugin-react-formatting)
+ * PHP library for adding color and styling to IRC text output (https://github.com/chrismou/php-irc-text-formatting)
  *
- * @link https://github.com/chrismou/phergie-irc-plugin-react-formatting for the canonical source repository
+ * @link https://github.com/chrismou/php-irc-text-formatting for the canonical source repository
  * @copyright Copyright (c) 2014 Chris Chrisostomou (http://mou.me)
  * @license http://phergie.org/license New BSD License
- * @package Chrismou\Phergie\Plugin\Formatting
+ * @package Chrismou\Irc\TextFormatting
  */
 
-namespace Chrismou\Phergie\Plugin\Formatting;
-
-use Phergie\Irc\Bot\React\AbstractPlugin;
-use Phergie\Irc\Bot\React\EventQueueInterface as Queue;
-use Phergie\Irc\Event\EventInterface as Event;
+namespace Chrismou\Irc\TextFormatting;
 
 /**
  * Plugin class.
  *
  * @category Chrismou
- * @package Chrismou\Phergie\Plugin\Formatting
+ * @package Chrismou\Irc\TextFormatting
  */
-class Plugin extends AbstractPlugin
+class Format
 {
     /**
      * @var string

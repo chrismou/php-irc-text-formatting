@@ -2,9 +2,9 @@
 
 PHP library for adding color and styling to IRC text output
 
-[![Build Status](https://travis-ci.org/chrismou/phergie-irc-plugin-react-formatting.svg)](https://travis-ci.org/chrismou/phergie-irc-plugin-react-formatting)
-[![Code Climate](https://codeclimate.com/github/chrismou/phergie-irc-plugin-react-formatting/badges/gpa.svg)](https://codeclimate.com/github/chrismou/phergie-irc-plugin-react-formatting)
-[![Test Coverage](https://codeclimate.com/github/chrismou/phergie-irc-plugin-react-formatting/badges/coverage.svg)](https://codeclimate.com/github/chrismou/phergie-irc-plugin-react-formatting)
+[![Build Status](https://travis-ci.org/chrismou/php-irc-text-formatting.svg?branch=master)](https://travis-ci.org/chrismou/php-irc-text-formatting)
+[![Code Climate](https://codeclimate.com/github/chrismou/php-irc-text-formatting/badges/gpa.svg)](https://codeclimate.com/github/chrismou/php-irc-text-formatting)
+[![Test Coverage](https://codeclimate.com/github/chrismou/php-irc-text-formatting/badges/coverage.svg)](https://codeclimate.com/github/chrismou/php-irc-text-formatting)
 
 ## About
 

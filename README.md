@@ -1,4 +1,4 @@
-# Text formatting developer plugin for [Phergie](http://github.com/phergie/phergie-irc-bot-react/)
+# Text formatting plugin for [Phergie](http://github.com/phergie/phergie-irc-bot-react/)
 
 [Phergie](http://github.com/phergie/phergie-irc-bot-react/) developer plugin for providing a simple way to add color/styling to your own plugin's text output.
 

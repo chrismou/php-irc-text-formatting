@@ -18,9 +18,7 @@
     "require-dev": {
         "phpunit/phpunit": "4.1.*",
         "phake/phake": "2.0.0-beta2",
-        "codeclimate/php-test-reporter": "dev-master",
-        "phergie/phergie-irc-plugin-react-autojoin": "1.0.*",
-        "phergie/phergie-irc-plugin-react-command": "1.0.*"
+        "codeclimate/php-test-reporter": "dev-master"
     },
     "autoload": {
         "psr-4": {

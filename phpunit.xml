@@ -2,15 +2,21 @@
 
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
-         colors="true"
-         processIsolation="false"
-         stopOnFailure="false"
-         syntaxCheck="true"
          bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         strict="true"
+         syntaxCheck="true"
+         verbose="true"
 >
     <testsuites>
         <testsuite name="chrismou/php-irc-text-formatting test suite">
-            <directory>tests</directory>
+            <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
 

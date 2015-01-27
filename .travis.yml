@@ -6,13 +6,18 @@ php:
   - 5.6
   - hhvm
 
-matrix:
-  allow_failures:
-    - php: hhvm
-
 before_script:
-  - composer self-update
-  - composer install
+  - travis_retry composer self-update
+  - travis_retry composer install
 
 script:
-  - ./vendor/bin/phpunit --coverage-text
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" == "hhvm" ]; then vendor/bin/phpunit; fi;'
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then vendor/bin/phpunit --coverage-clover=coverage.clover; fi;'
+
+after_script:
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then wget https://scrutinizer-ci.com/ocular.phar; fi;'
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then php ocular.phar code-coverage:upload --format=php-clover coverage.clover; fi;'
+
+notifications:
+  slack:
+    secure: Kuz++Xr13WPEfDlB8gMsxRDR5OTCO7/8XNx2ByWl36btD2IIiqSJuRtP9X/rWVr9xk+AbA2hHdNpG3XJbkZvUg8XtV51diwfsr7rerlGIuA1owbd51yz86OSx6dY92kyJG5+W8BijH84CEt+QRi+jSHnRcd3pxPcmUMLGv8f1MY=

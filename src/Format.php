@@ -59,19 +59,8 @@ class Format
     /**
      * @param array $config
      */
-    public function __construct(array $config = array())
+    public function __construct()
     {
-    }
-
-    /**
-     * Return an array of commands and associated methods
-     *
-     * @return array
-     */
-    public function getSubscribedEvents()
-    {
-        // Not triggered by any IRC events
-        return array();
     }
 
     /**

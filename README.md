@@ -2,9 +2,9 @@
 
 PHP library for adding color and styling to IRC text output
 
-[![Build Status](https://travis-ci.org/chrismou/php-irc-text-formatting.svg?branch=master)](https://travis-ci.org/chrismou/php-irc-text-formatting)
-[![Code Climate](https://codeclimate.com/github/chrismou/php-irc-text-formatting/badges/gpa.svg)](https://codeclimate.com/github/chrismou/php-irc-text-formatting)
-[![Test Coverage](https://codeclimate.com/github/chrismou/php-irc-text-formatting/badges/coverage.svg)](https://codeclimate.com/github/chrismou/php-irc-text-formatting)
+[![Build Status](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/badges/build.png?b=master)](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/build-status/master)
+[![Code Coverage](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/?branch=master)
 
 ## About
 
@@ -91,7 +91,7 @@ $format->style("This text will be underlined", "underline");
 * underline
 * reverse (switches foreground and background color)
 
-I've purposely excluded the lesser used strikethrough and italic codes as support for them among IRC clients is fairly poor.
+I've purposely excluded strikethrough and italic codes as support for them among IRC clients is fairly poor.
 
 #### Rainbow
 This takes a single parameter - the text - and gives the string a rainbow colouring.

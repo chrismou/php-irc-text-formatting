@@ -5,7 +5,7 @@
     "homepage": "https://github.com/chrismou/php-irc-text-formatting",
     "license": "BSD-2-Clause",
     "support": {
-        "email": "phergie@mou.me.uk",
+        "email": "dev@mou.me",
         "issues": "https://github.com/chrismou/php-irc-text-formatting/issues",
         "source": "https://github.com/chrismou/php-irc-text-formatting"
     },
@@ -15,8 +15,7 @@
     },
     "require-dev": {
         "phpunit/phpunit": "4.1.*",
-        "phake/phake": "2.0.0-beta2",
-        "codeclimate/php-test-reporter": "dev-master"
+        "phake/phake": "2.0.0-beta2"
     },
     "autoload": {
         "psr-4": {

@@ -36,7 +36,7 @@ class FormatTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType('string', $validConvertedString);
         $this->assertInternalType('string', $invalidConvertedString);
 
-        $this->assertSame($validConvertedString, "\x0304".$string."\x03");
+        $this->assertSame($validConvertedString, "\x0304" . $string . "\x03");
         $this->assertSame($invalidConvertedString, $string);
     }
 
@@ -62,9 +62,9 @@ class FormatTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType('string', $invalidStyle);
 
 
-        $this->assertSame($boldString, "\x02".$string."\x02");
-        $this->assertSame($underlineString, "\x1F".$string."\x1F");
-        $this->assertSame($reverseString, "\x16".$string."\x16");
+        $this->assertSame($boldString, "\x02" . $string . "\x02");
+        $this->assertSame($underlineString, "\x1F" . $string . "\x1F");
+        $this->assertSame($reverseString, "\x16" . $string . "\x16");
         $this->assertSame($invalidStyle, $string);
     }
 
@@ -89,8 +89,11 @@ class FormatTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType('string', $convertedString2);
         $this->assertInternalType('string', $convertedString3);
 
-        $this->assertSame("\x0304a\x03\x0308b\x03\x0313c\x03\x0303d\x03\x0306e\x03\x0307f\x03\x0302g\x03", $convertedString1);
-        $this->assertSame("\x0304a\x03 \x0308b\x03 \x0313c\x03 \x0303d\x03 \x0306e\x03\x0307f\x03\x0302g\x03", $convertedString2);
-        $this->assertSame("\x0304a\x03\x0308b\x03\x0313c\x03\x0303d\x03\x0306e\x03\x0307f\x03\x0302g\x03\x0304h\x03", $convertedString3);
+        $this->assertSame("\x0304a\x03\x0308b\x03\x0313c\x03\x0303d\x03\x0306e\x03\x0307f\x03\x0302g\x03",
+            $convertedString1);
+        $this->assertSame("\x0304a\x03 \x0308b\x03 \x0313c\x03 \x0303d\x03 \x0306e\x03\x0307f\x03\x0302g\x03",
+            $convertedString2);
+        $this->assertSame("\x0304a\x03\x0308b\x03\x0313c\x03\x0303d\x03\x0306e\x03\x0307f\x03\x0302g\x03\x0304h\x03",
+            $convertedString3);
     }
 }

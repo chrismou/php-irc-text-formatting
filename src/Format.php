@@ -27,37 +27,37 @@ class Format
      * @var array
      */
     protected $colorCodes = array(
-        'white'         => '00',
-        'black'         => '01',
-        'blue'          => '02',
-        'green'         => '03',
-        'red'           => '04',
-        'brown'         => '05',
-        'purple'        => '06',
-        'orange'        => '07',
-        'yellow'        => '08',
-        'lightGreen'    => '10',
-        'teal'          => '10',
-        'cyan'          => '11',
-        'lightBlue'     => '12',
-        'pink'          => '13',
-        'grey'          => '14',
-        'lightGrey'     => '15'
+        'white' => '00',
+        'black' => '01',
+        'blue' => '02',
+        'green' => '03',
+        'red' => '04',
+        'brown' => '05',
+        'purple' => '06',
+        'orange' => '07',
+        'yellow' => '08',
+        'lightGreen' => '10',
+        'teal' => '10',
+        'cyan' => '11',
+        'lightBlue' => '12',
+        'pink' => '13',
+        'grey' => '14',
+        'lightGrey' => '15'
     );
 
     /**
      * @var array
      */
     protected $styleTag = array(
-        'bold'          => "\x02",
-        'underline'     => "\x1F",
+        'bold' => "\x02",
+        'underline' => "\x1F",
         //'italic'        => "\x09",    // Poor support
         //'strikethrough' => "\x13",    // Poor support
-        'reverse'       => "\x16",
+        'reverse' => "\x16",
     );
 
     /**
-     * @param array $config
+     * Constructor
      */
     public function __construct()
     {
@@ -71,10 +71,11 @@ class Format
      * @param string|false $backgroundColor
      * @return string
      */
-    public function color($text, $foregroundColor, $backgroundColor=false)
+    public function color($text, $foregroundColor, $backgroundColor = false)
     {
         // If the foreground doesn't exist or is empty, quit now and return the original string
-        return (!$foregroundColor || !isset($this->colorCodes[$foregroundColor])) ? $text : sprintf("%s%s%s%s%s",
+        return (!$foregroundColor || !isset($this->colorCodes[$foregroundColor])) ? $text : sprintf(
+            "%s%s%s%s%s",
             $this->colorTag,
             $this->colorCodes[$foregroundColor],
             ($backgroundColor && isset($this->colorCodes[$backgroundColor])) ? sprintf(",%s", $this->colorCodes[$backgroundColor]) : "",
@@ -92,7 +93,8 @@ class Format
      */
     public function style($text, $style)
     {
-        return sprintf("%s%s%s",
+        return sprintf(
+            "%s%s%s",
             (isset($this->styleTag[$style])) ? $this->styleTag[$style] : "",
             $text,
             (isset($this->styleTag[$style])) ? $this->styleTag[$style] : ""
@@ -111,14 +113,16 @@ class Format
         $output = "";
         $rainbowKey = 0;
 
-        for($a=0;$a<strlen($text);$a++) {
+        for ($a = 0; $a < strlen($text); $a++) {
 
-            if ($rainbowKey > count($rainbow)-1) $rainbowKey = 0;
+            if ($rainbowKey > count($rainbow) - 1) {
+                $rainbowKey = 0;
+            }
 
             $char = substr($text, $a, 1);
 
             // Ignore spaces
-            if ($char==" ") {
+            if ($char == " ") {
                 $output .= $char;
                 continue;
             }

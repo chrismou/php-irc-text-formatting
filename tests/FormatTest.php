@@ -21,16 +21,6 @@ use Chrismou\Irc\TextFormatting\Format;
 class FormatTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Tests that getSubscribedEvents() returns an array.
-     */
-    public function testGetSubscribedEvents()
-    {
-        $format = new Format;
-        $this->assertInternalType('array', $format->getSubscribedEvents());
-        $this->assertEmpty($format->getSubscribedEvents());
-    }
-
-    /**
      * Test color responses are what we're expecting
      */
     public function testColor()

@@ -112,8 +112,9 @@ class Format
         $rainbow = array('red', 'yellow', 'pink', 'green', 'purple', 'orange', 'blue');
         $output = "";
         $rainbowKey = 0;
+        $charCount = strlen($text);
 
-        for ($a = 0; $a < strlen($text); $a++) {
+        for ($a = 0; $a < $charCount; $a++) {
 
             if ($rainbowKey > count($rainbow) - 1) {
                 $rainbowKey = 0;

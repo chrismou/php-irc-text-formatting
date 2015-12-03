@@ -2,6 +2,7 @@
 vendor/*
 config.php
 build/*
+composer.lock
 
 ## IDE
 .idea/*

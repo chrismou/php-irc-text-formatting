@@ -16,7 +16,7 @@ matrix:
 
 before_script:
   - travis_retry composer self-update
-  - travis_retry composer update
+  - travis_retry composer install
   - mkdir -p build/logs
 
 script:

@@ -15,12 +15,8 @@ This plugin is designed to provide IRC script writers a simple way to add colors
 
 The recommended method of installation is [through composer](http://getcomposer.org).
 
-```JSON
-{
-    "require": {
-        "chrismou/php-irc-text-formatting": "dev-master"
-    }
-}
+```
+composer require chrismou/php-irc-text-formatting
 ```
 
 ## Configuration
@@ -38,6 +34,7 @@ function __construct(array $config=array())
 ```
 
 Or, if you're only using it once, you can just include it directly in your method.
+
 ```php
 public function foo
 {
@@ -108,6 +105,14 @@ To run the unit test suite:
 curl -s https://getcomposer.org/installer | php
 php composer.phar install
 ./vendor/bin/phpunit
+```
+
+Or to test on all supported versions, ensure docker is installed and running, then run:
+
+```
+curl -s https://getcomposer.org/installer | php
+php composer.phar install
+./vendor/bin/dunit
 ```
 
 ## License

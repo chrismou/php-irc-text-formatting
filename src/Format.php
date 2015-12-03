@@ -68,10 +68,10 @@ class Format
      *
      * @param string $text
      * @param string $foregroundColor
-     * @param string|false $backgroundColor
+     * @param string $backgroundColor
      * @return string
      */
-    public function color($text, $foregroundColor, $backgroundColor = false)
+    public function color($text, $foregroundColor, $backgroundColor = null)
     {
         // If the foreground doesn't exist or is empty, quit now and return the original string
         return (!$foregroundColor || !isset($this->colorCodes[$foregroundColor])) ? $text : sprintf(

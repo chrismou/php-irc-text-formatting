@@ -8,3 +8,6 @@ tools:
         enabled: true
         config:
             standard: PSR2
+filter:
+    excluded_paths:
+        - tests/*

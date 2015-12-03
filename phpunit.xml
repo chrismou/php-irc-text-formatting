@@ -2,6 +2,8 @@
 
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true"
          bootstrap="vendor/autoload.php"
          colors="true"
          convertErrorsToExceptions="true"
@@ -10,10 +12,7 @@
          processIsolation="false"
          stopOnError="false"
          stopOnFailure="false"
-         strict="true"
-         syntaxCheck="true"
-         verbose="true"
->
+         verbose="true">
     <testsuites>
         <testsuite name="chrismou/php-irc-text-formatting test suite">
             <directory suffix="Test.php">./tests</directory>

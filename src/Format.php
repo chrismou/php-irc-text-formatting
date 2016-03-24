@@ -78,7 +78,9 @@ class Format
             "%s%s%s%s%s",
             $this->colorTag,
             $this->colorCodes[$foregroundColor],
-            ($backgroundColor !== null && isset($this->colorCodes[$backgroundColor])) ? sprintf(",%s", $this->colorCodes[$backgroundColor]) : "",
+            ($backgroundColor !== null && isset($this->colorCodes[$backgroundColor]))
+                ? sprintf(",%s", $this->colorCodes[$backgroundColor])
+                : "",
             $text,
             $this->colorTag
         );

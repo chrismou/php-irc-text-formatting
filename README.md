@@ -2,9 +2,12 @@
 
 PHP library for adding color and styling to IRC text output
 
-[![Build Status](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/badges/build.png?b=master)](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/build-status/master)
-[![Code Coverage](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chrismou/php-irc-text-formatting/?branch=master)
+[![Build Status](https://travis-ci.org/chrismou/php-irc-text-formatting.svg?branch=master)](https://travis-ci.org/chrismou/php-irc-text-formatting)
+[![Test Coverage](https://codeclimate.com/github/chrismou/php-irc-text-formatting/badges/coverage.svg)](https://codeclimate.com/github/chrismou/php-irc-text-formatting/coverage)
+[![Code Climate](https://codeclimate.com/github/chrismou/php-irc-text-formatting/badges/gpa.svg)](https://codeclimate.com/github/chrismou/php-irc-text-formatting)
+[![Buy me a beer](https://img.shields.io/badge/donate-PayPal-019CDE.svg)](https://www.paypal.me/chrismou)
+
+
 
 ## About
 

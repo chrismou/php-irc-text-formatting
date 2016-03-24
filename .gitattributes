@@ -10,3 +10,5 @@
 /.scrutinizer       export-ignore
 /.travis.yml        export-ignore
 /phpunit.xml        export-ignore
+/Gruntfile.js       export-ignore
+/package.json       export-ignore

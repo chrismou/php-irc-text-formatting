@@ -7,8 +7,6 @@ PHP library for adding color and styling to IRC text output
 [![Code Climate](https://codeclimate.com/github/chrismou/php-irc-text-formatting/badges/gpa.svg)](https://codeclimate.com/github/chrismou/php-irc-text-formatting)
 [![Buy me a beer](https://img.shields.io/badge/donate-PayPal-019CDE.svg)](https://www.paypal.me/chrismou)
 
-
-
 ## About
 
 This plugin is designed to provide IRC script writers a simple way to add colors/styles to their output. It should be compatible with most major PHP IRC bots, such as 

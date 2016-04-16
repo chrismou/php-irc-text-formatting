@@ -25,6 +25,7 @@ class Format
 
     /**
      * @var array
+     * @link http://www.mirc.com/colors.html
      */
     protected $colorCodes = array(
         'white' => '00',
@@ -32,17 +33,24 @@ class Format
         'blue' => '02',
         'green' => '03',
         'red' => '04',
+        'lightRed' => '04',
+        'light red' => '04',
         'brown' => '05',
         'purple' => '06',
         'orange' => '07',
         'yellow' => '08',
         'lightGreen' => '10',
+        'light green' => '10',
         'teal' => '10',
-        'cyan' => '11',
+        'cyan' => '10',
+        'light cyan' => '11',
+        'lightCyan' => '11',
         'lightBlue' => '12',
+        'light blue' => '12',
         'pink' => '13',
         'grey' => '14',
-        'lightGrey' => '15'
+        'lightGrey' => '15',
+        'light grey' => '15',
     );
 
     /**

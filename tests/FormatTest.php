@@ -96,4 +96,41 @@ class FormatTest extends \PHPUnit_Framework_TestCase
         $this->assertSame("\x0304a\x03\x0308b\x03\x0313c\x03\x0303d\x03\x0306e\x03\x0307f\x03\x0302g\x03\x0304h\x03",
             $convertedString3);
     }
+
+    /**
+     * @dataProvider mircColors
+     */
+    public function testMircColors($color, $expected)
+    {
+        $format = new Format();
+        $result = $format->color('', $color);
+        $expected = "\x03$expected\x03";
+        $this->assertEquals($expected, $result);
+    }
+
+    /**
+     * @link http://www.mirc.com/colors.html
+     * @return array
+     */
+    public function mircColors()
+    {
+        return array(
+            array('white', "00"),
+            array('black', "01"),
+            array('blue', "02"),
+            array('green', "03"),
+            array('light red', "04"),
+            array('brown', "05"),
+            array('purple', "06"),
+            array('orange', "07"),
+            array('yellow', "08"),
+            array('light green', "09"),
+            array('cyan', "10"),
+            array('light cyan', "11"),
+            array('light blue', "12"),
+            array('pink', "13"),
+            array('grey', "14"),
+            array('light grey', "15"),
+        );
+    }
 }

@@ -25,24 +25,45 @@ class Format
 
     /**
      * @var array
+     * @link http://www.mirc.com/colors.html
+     * @link https://github.com/myano/jenni/wiki/IRC-String-Formatting
      */
     protected $colorCodes = array(
         'white' => '00',
         'black' => '01',
         'blue' => '02',
+        'navy' => '02',
         'green' => '03',
         'red' => '04',
+        'lightRed' => '04',
+        'light red' => '04',
         'brown' => '05',
+        'maroon' => '05',
         'purple' => '06',
         'orange' => '07',
+        'olive' => '07',
         'yellow' => '08',
-        'lightGreen' => '10',
+        'lightGreen' => '09',
+        'light green' => '09',
+        'lime' => '09',
         'teal' => '10',
-        'cyan' => '11',
+        'green cyan' => '10',
+        'blue cyan' => '10',
+        'cyan' => '10',
+        'aqua' => '11',
+        'light cyan' => '11',
+        'lightCyan' => '11',
         'lightBlue' => '12',
+        'light blue' => '12',
+        'royal' => '12',
         'pink' => '13',
+        'light purple' => '13',
+        'lightPurple' => '13',
+        'fuchsia' => '13',
         'grey' => '14',
-        'lightGrey' => '15'
+        'lightGrey' => '15',
+        'light grey' => '15',
+        'silver' => '15',
     );
 
     /**
